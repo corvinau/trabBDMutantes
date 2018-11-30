@@ -18,7 +18,7 @@ public class CadastrarActivity extends AppCompatActivity implements Response.Lis
 
     @Override
     public void onErrorResponse(VolleyError error) {
-        Toast.makeText(getApplicationContext(),error.getMessage(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(),"Erro ao tentar salvar, tente novamente.", Toast.LENGTH_SHORT).show();
     }
 
     @Override

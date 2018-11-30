@@ -50,7 +50,7 @@ public class LoginActivity extends AppCompatActivity implements Response.Listene
 
     @Override
     public void onErrorResponse(VolleyError error) {
-        Toast.makeText(getApplicationContext(),error.getMessage(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(),"Erro ao tentar logar, tente novamente.", Toast.LENGTH_SHORT).show();
     }
 
     @Override

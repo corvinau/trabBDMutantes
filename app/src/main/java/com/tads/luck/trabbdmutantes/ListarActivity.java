@@ -25,9 +25,8 @@ public class ListarActivity extends AppCompatActivity implements Response.Listen
         setContentView(R.layout.activity_listar);
 
         serviceCaller = new ServiceCaller();
-
+        serviceCaller = new ServiceCaller(getApplicationContext());
         serviceCaller.getAllMutantes(this);
-
         list = (ListView) findViewById(R.id.list);
 
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listaMutantes);

@@ -28,11 +28,11 @@ public class CadastrarUsuarioActivity extends AppCompatActivity implements Respo
         passwordEditText = findViewById(R.id.password);
     }
 
-    public void cadastrar(View view){
+    public void cadastrarUsuario(View view){
         User u = new User();
         u.setUsername(loginEditText.getText().toString());
         u.setPassword(passwordEditText.getText().toString());
-
+        serviceCaller = new ServiceCaller(view.getContext());
         ServiceResponse response = serviceCaller.addUser(u,this);
         if(response != null){
 
